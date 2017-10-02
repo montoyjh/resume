@@ -16,6 +16,7 @@
             doi=false,
             isbn=false,
             url=false]{biblatex}
+\renewbibmacro{in:}{}
 %\usepackage{natbib}
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
@@ -24,7 +25,7 @@
 
 % bib section
 \DefineBibliographyStrings{english}{%
-  references = {Selected Publications},
+  references = {Publications},
   }
 \addbibresource{cv.bib}
 
@@ -126,12 +127,14 @@ ItalicFont = Fontin-Italic.otf
 \end{tabular}
 \vspace{0.2in}
 %Section: Work Experience at the top
-\section{Research Experience}
+\section{Professional History}
 \begin{tabular}{l|p{11cm}}
  \emph{2015-Current} & Postdoctoral Researcher, \textbf{Lawrence Berkeley National Laboratory} \\
  &\emph{Advisor: Kristin \textsc{Persson}, Energy Environental Technologies Division}\\&
  \footnotesize{Part of the core development team for the Materials Project.  Projects include performing 
- high-throughput calculations of elastic tensors and developing workflows for surface science.}\\\multicolumn{2}{c}{} \\
+ high-throughput calculations of elastic tensors, developing workflows for surface science, refining approaches 
+ to electrochemical stability analysis, and determining trends in complex oxide reactivity for solar water splitting
+ and CO$_2$ reduction}\\\multicolumn{2}{c}{} \\
  \textsc{2010-2015} & Graduate Student Researcher, \textbf{Stanford University}\\&\emph{Advisor: Jens \textsc{N\o rskov}, Dept. of Chemical Engineering}\\&\footnotesize{Performed DFT simulations of the electrocatalysis of nitrogen electroreduction, total water splitting on perovskite oxides, and C-C coupling in CO$_2$ electroreduction.  Constructed linear scaling relations to identify trends and structure sensitivity of various catalytic surfaces.  Used and developed electrochemical kinetics in CatMAP software to model steady-state turnover and selectivity.  Created tools for managing data corresponding to over 5000 bulk compounds, 500 surfaces, and 10000 adsorbate configurations.}\\\multicolumn{2}{c}{} \\
 \textsc{2006-2010} & Undergraduate Researcher, \textbf{University of South Carolina}\\&\emph{Advisors: John \textsc{Monnier}, Chris \textsc{Williams}, Dept. of Chemical Engineering}\\&\footnotesize{Conducted experimental synthesis and characterization of bimetallic catalysts for the selective hydrogenation of acetylene and epoxybutene.  Used electroless deposition (ED) technique to prepare [Cu,Ag,Au][Pd,Pt]/SiO$_2$ bimetallic catalysts.  Characterized catalyst surface area and activity.}\\ \multicolumn{2}{c}{} \\
 \textsc{2008} & IREU, \textbf{King Mongkut University of Technology, Thonburi, Thailand}\\&\emph{Advisors: Preecha \textsc{Termsuksawad}, Dept. of Materials Science}\\&\footnotesize{Studied extraction of Ni-Co alloys from spent nickel metal-hydride (Ni-MH) batteries via electrochemical characterization with cyclic voltammetry (CV) and chronoamperometry.}
@@ -147,60 +150,93 @@ ItalicFont = Fontin-Italic.otf
 2008 & \textbf{Barry M. Goldwater Scholarship} \\
 \end{tabular}
 
+\begin{refsection}
 %\section{Publications}
 %\vspace{0.1in}
-\nocite{*}
+\nocite{Dagdelen2017,Mathew2017,C7CP02855E,Montoya2017a,Montoya2017,Latimer2016,Seitz2016,Sandberg2016,Tsai2016,Wang2015,Bertheussen2016,Doyle2015,Montoya2015,Montoya2015a,Schaal2007,Montoya2014,Hansen2013,Montoya2013}
+%\nocite{*}
 %\bibliographystyle{unsrt}
 \printbibliography
-\section{Selected Talks}
+\end{refsection}
+\vspace{0.2in}
+\begin{refsection}
+%\subsection{Forthcoming publications}
+\nocite{Montoya2017c,Montoya2017b,Singh2017,Singh2017a}
+\printbibliography[title=Forthcoming Publications]
+\end{refsection}
+\vspace{0.2in}
+\section{Selected Recent and Upcoming Talks}
 \begin{tabular}{ll}
-October 2016 & \textsc{The Materials Project: Challenges and Opportunities}\\
-& \textsc{in High-throughput computational Materials Science}, \\
-& Joseph H. Montoya, Patrick Huck, Donny Winston, Kristin Persson  \\
-& ALS Users Meeting, Berkeley, CA \vspace{0.1in} \\
-November 2014 & \textsc{The Challenge of Electrochemical Ammonia Synthesis} \\
-& Joseph H. Montoya, Charlie Tsai, Aleksandra Vojvodic, Jens K. N\o rskov \\
-& AIChE Annual Meeting, Atlanta, GA \vspace{0.1in} \\
-October 2014 & \textsc{The Koper Effect: CO dimers in CO$_2$ electroreduction on Cu}\\
-& Joseph H. Montoya, Chuan Shi, Karen Chan, Jens K. N\o rskov\\
-& ECAT Annual Symposium, Whistler, BC, Canada \vspace{0.1in} \\
+November 2017 & \textsc{A High-Throughput Computational Screening Approach for}\\
+& \textsc{Solar Fuels Photoelectrocatalysis} \vspace{0.02in} \\
+&  \textsc{New Milestones and Challenges to High-Throughput Computation} \\ 
+& \textsc{of Elastic Properties on the Materials Project} \vspace{0.02in} \\
+& \textsc{Climbing the Volcano: Active-Site Engineering at the Atomic Scale} \vspace{0.04in}\\
+& \textbf{AIChE Annual Meeting, Minneapolis, MN} \vspace{0.1in} \\
+September 2017 & \textsc{The Materials Project: Challenges and Opportunities}\\
+& \textsc{in High-throughput computational Materials Science} \vspace{0.04in} \\
+& \textbf{E-CAM Industry Workshop, "From Atom to Material", Cambridge, UK} \vspace{0.1in} \\
+August 2017 & \textsc{Towards a solar fuels future: Theoretical metrics for} \\
+& \textsc{photoelectrocatalyst screening} \vspace{0.02in} \\
+& \textsc{High-throughput workflows for determining} \\
+& \textsc{adsorption energies on solid surfaces} \vspace{0.04in} \\
+& \textbf{ACS Fall Meeting, Washington, DC} \vspace{0.1in} \\
+June 2017 &\textsc{The Materials Project: Challenges and Opportunities}\\
+& \textsc{in High-throughput computational Materials Science} \vspace{0.04in} \\
+& \textbf{ECS Annual Meeting, New Orleans, LA} \vspace{0.06in} \\
+May 2017 & \textsc{Electrocatalysis for renewable energy via}\\
+& \textsc{active-site engineering at the atomic scale}\vspace{0.04in}\\
+& \textbf{Seminar, University of South Carolina, Columbia, SC}\\
 \end{tabular}
-\section{Skills}
+\section{Skills and Professional Activities}
 \begin{tabular}{ll}
- \textsc{Scientific computing} & Extensive experience in python software development for \\ 
- & scientific applications.  See \href{https://github.com/montoyjh}{my github profile}. Experience using\\
+  \textsc{Teaching} &Certified Software Carpentry instructor for workshops on 
+ \\&introductory and advanced python for scientific computing.  Served
+ \\&as lead or co-instructor in six eight-hour workshops, served as
+ \\&secondary instructor/helper in in five additional workshops. 
+ \\&Developed workshop material for \href{https://swcarpentry.github.io/python-second-language/}{``Python as a Second Language"}
+ \\&and \href{https://swcarpentry.github.io/python-novice-gapminder/}{``Introduction to Python with Gapminder Data"}\vspace{0.05in}  
+ 
+ \\&Twice served as instructor and course designer  in the annual
+ \\&\href{https://github.com/materialsproject/workshop-2017}{Materials Project Workshop}. \vspace{0.05in}\\
+
+ & Served twice as TA to Prof. Eric Shaqfeh (Stanford ChemE) in \\
+ &``Applied Mathemetics for the Chemical and Biological Sciencies,'' \\
+ &an introductory graduate course for chemical engineers. \\
+ &Won outstanding TA award.\vspace{0.1in}\\
+ %%%
+ \textsc{High-performance} & Extensive experience in python software development for \\ 
+ \textsc{computing}  & scientific applications.  See \href{https://github.com/montoyjh}{my github profile}. Experience using\\
  & NERSC, Oak Ridge (OLCF), Argonne (ALCF), and SLAC \\
  &supercomputing Resources.  Extensive experience in automated \\
- &workflow management. Contributor to pymatgen, FireWorks,\\
- &MatMethods, and CatMAP open source projects\vspace{0.05in}\\
- \textsc{Data management} & Extensive experience in MongoDB infrastructure for materials \\
- & data management. \vspace{0.05in}\\
- \textsc{DFT Simulations} & VASP, Quantum Espresso, GPAW, Dacapo \vspace{0.05in}\\
- \textsc{Technical Writing} & Experience in preparation of scientific manuscripts, research \\
- & proposals, \LaTeX, and data visualization \vspace{0.05in}\\
- \textsc{Teaching} & Served twice as TA to Prof. Eric Shaqfeh (Stanford ChemE) in \\
- &``Applied Mathemetics for the Chemical and Biological Sciencies,'' \\
- &an introductory graduate course for chemical engineers.\vspace{0.05in}\\
- &Certified Software Carpentry instructor for workshops on 
- \\&introductory and advanced python for scientific computing. 
- \\&Developed workshop material for "Python as a Second Language"
- \\&and "Introduction to Python with Gapminder Data"\vspace{0.05in}  
- \\&Wrote materials and served as instructor for the pymatgen module
- \\&in Materials Project Workshop (2016).
-\end{tabular}
-\section{Other interests}
+ &workflow management. Contributor to \href{pymatgen.org}{pymatgen}, \href{https://materialsproject.github.io/fireworks/}{FireWorks},\\
+ &\href{https://hackingmaterials.github.io/atomate}{atomate}, and \href{http://catmap.readthedocs.io/en/latest/}{CatMAP} open source projects\vspace{0.1in}\\
+%%%
+ \textsc{Data science} & Extensive experience in MongoDB infrastructure for materials \\
+ & data management at the \href{http://materialsproject.org}{materials project}.  Experience \\
+ & using tensorflow, scikit-learn, pandas, jupyter and \\
+ & numerous other python libraries for data science.\vspace{0.1in}\\
+%%%
+ \textsc{DFT Simulations} & Extensive experience using density functional theory software, \\
+ & including VASP, Quantum Espresso, GPAW, and Dacapo \vspace{0.1in}\\
+ \textsc{Technical writing} & Experience in preparation of scientific manuscripts, research \\
+ \textsc{and reviewing} & proposals, \LaTeX, and data visualization \vspace{0.05in}\\
+& Reviewed articles in ACS Catalysis (5), J. Phys. Chem. (1), \\
+& Chem. Mater. (3), and Catalysis Today (1)
+ \end{tabular}
+\section{Hobbies and other interests}
 \begin{tabular}{ll}
- \textsc{Music} & Collegiate proficiency in classical piano.  Earned a performance certificate\\
+ \textsc{Music} & Advanced proficiency in jazz vibraphone, completed coursework in jazz \\
+ & improvisation, jazz standards for gigs, and current member of \textit{Music of the Masters}\\
+ & ensemble at California Jazz Conservatory's Community Jazz School.\vspace{0.05in}\\
+ & Collegiate proficiency in classical piano.  Earned a performance certificate\\
  & from two recitals given while at University of South Carolina in the studio of\\
  & Prof. Joseph Rackers.\vspace{0.05in}\\
  & Intermediate proficiency in steel drumming, 3 years experience in Palmetto \\
  & Pans Steel Drum ensemble. \vspace{0.05in}\\
- & Intermediate proficiency in jazz vibraphone, completed coursework in jazz \\
- & improvisation and jazz standards for gigs with Glenn Richman\\
- & at California Jazz Conservatory's Community Jazz School.\vspace{0.05in}\\
- \textsc{Quiz Bowl} & Experienced moderator, player, and question writer for ACF and NAQT \\
+  \textsc{Quiz Bowl} & Experienced moderator, player, and question writer for ACF and NAQT \\
  & format team academic buzzer-based competitions, formerly for \\
- & University of South Carolina and Stanford, currently as a volunteer.
+ & University of South Carolina and Stanford, currently serves as a volunteer.
 \end{tabular}
 \nocite{*}
 \end{document}
