@@ -44,6 +44,25 @@
   }
 }
 
+
+% goofy shit to fix sub/sup
+\makeatletter
+% get rid of the closing braces
+\def\textless{\afterassignment\textless@\let\next= }
+% get the tag type
+\def\textless@#1#{\@nameuse{textless@#1}}
+% code for <sub>
+\def\textless@sub#1#2/sub#3{%
+  \ensuremath{_{\let\textless\relax#2}}%
+  \egroup % matches the first brace
+}
+% code for <sub>
+\def\textless@sup#1#2/sup#3{%
+  \ensuremath{^{\let\textless\relax#2}}%
+  \egroup % matches the first brace
+}
+\makeatother
+
 \makeauthorbold{Montoya}
 
 \setlength{\bibitemsep}{0.2\baselineskip}
@@ -110,7 +129,7 @@ ItalicFont = Fontin-Italic.otf
 
 \begin{tabular}{rl}
     %\textsc{Place and Date of Birth:} & Someplace, Italy  | dd Month 1912 \\
-    \textsc{Address:}   & 1540 Hearst Avenue, Apt. 4, Berkeley, CA  94703 \\
+    \textsc{Address:}   & 1 Cyclotron Road, M/S 33R0146, Berkeley, CA 94703 \\
     \textsc{Phone:}     & (843) 276-1397\\
     \textsc{email:}     & \href{mailto:montoyjh@lbl.gov}{montoyjh@lbl.gov}
 \end{tabular}
@@ -130,14 +149,14 @@ ItalicFont = Fontin-Italic.otf
 \section{Professional History}
 \begin{tabular}{l|p{11cm}}
  \emph{2015-Current} & Postdoctoral Researcher, \textbf{Lawrence Berkeley National Laboratory} \\
- &\emph{Advisor: Kristin \textsc{Persson}, Energy Environental Technologies Division}\\&
- \footnotesize{Part of the core development team for the Materials Project.  Projects include performing 
+ &\emph{Advisor: Prof. Kristin \textsc{Persson}, Energy Technologies Area}\\& \smallskip
+ \small{Part of the core development team for the Materials Project.  Projects include performing 
  high-throughput calculations of elastic tensors, developing workflows for surface science, refining approaches 
  to electrochemical stability analysis, and determining trends in complex oxide reactivity for solar water splitting
  and CO$_2$ reduction}\\\multicolumn{2}{c}{} \\
- \textsc{2010-2015} & Graduate Student Researcher, \textbf{Stanford University}\\&\emph{Advisor: Jens \textsc{N\o rskov}, Dept. of Chemical Engineering}\\&\footnotesize{Performed DFT simulations of the electrocatalysis of nitrogen electroreduction, total water splitting on perovskite oxides, and C-C coupling in CO$_2$ electroreduction.  Constructed linear scaling relations to identify trends and structure sensitivity of various catalytic surfaces.  Used and developed electrochemical kinetics in CatMAP software to model steady-state turnover and selectivity.  Created tools for managing data corresponding to over 5000 bulk compounds, 500 surfaces, and 10000 adsorbate configurations.}\\\multicolumn{2}{c}{} \\
-\textsc{2006-2010} & Undergraduate Researcher, \textbf{University of South Carolina}\\&\emph{Advisors: John \textsc{Monnier}, Chris \textsc{Williams}, Dept. of Chemical Engineering}\\&\footnotesize{Conducted experimental synthesis and characterization of bimetallic catalysts for the selective hydrogenation of acetylene and epoxybutene.  Used electroless deposition (ED) technique to prepare [Cu,Ag,Au][Pd,Pt]/SiO$_2$ bimetallic catalysts.  Characterized catalyst surface area and activity.}\\ \multicolumn{2}{c}{} \\
-\textsc{2008} & IREU, \textbf{King Mongkut University of Technology, Thonburi, Thailand}\\&\emph{Advisors: Preecha \textsc{Termsuksawad}, Dept. of Materials Science}\\&\footnotesize{Studied extraction of Ni-Co alloys from spent nickel metal-hydride (Ni-MH) batteries via electrochemical characterization with cyclic voltammetry (CV) and chronoamperometry.}
+ \textsc{2010-2015} & Graduate Student Researcher, \textbf{Stanford University}\\&\emph{Advisor: Prof. Jens \textsc{N\o rskov}, Dept. of Chemical Engineering}\\&\small{Performed DFT simulations of the electrocatalysis of nitrogen electroreduction, total water splitting on perovskite oxides, and C-C coupling in CO$_2$ electroreduction.  Constructed linear scaling relations to identify trends and structure sensitivity of various catalytic surfaces.  Used and developed electrochemical kinetics in CatMAP software to model steady-state turnover and selectivity.  Created tools for managing data corresponding to over 5000 bulk compounds, 500 surfaces, and 10000 adsorbate configurations.}\\\multicolumn{2}{c}{} \\
+\textsc{2006-2010} & Undergraduate Researcher, \textbf{University of South Carolina}\\&\emph{Advisors: John \textsc{Monnier}, Chris \textsc{Williams}, Dept. of Chemical Engineering}\\&\small{Conducted experimental synthesis and characterization of bimetallic catalysts for the selective hydrogenation of acetylene and epoxybutene.  Used electroless deposition (ED) technique to prepare [Cu,Ag,Au][Pd,Pt]/SiO$_2$ bimetallic catalysts.  Characterized catalyst surface area and activity.}\\ \multicolumn{2}{c}{} \\
+\textsc{2008} & IREU, \textbf{King Mongkut University of Technology, Thonburi, Thailand}\\&\emph{Advisors: Preecha \textsc{Termsuksawad}, Dept. of Materials Science}\\&\small{Studied extraction of Ni-Co alloys from spent nickel metal-hydride (Ni-MH) batteries via electrochemical characterization with cyclic voltammetry (CV) and chronoamperometry.}
 \end{tabular}
 \vspace{0.2in}
 %Section: Scholarships and additional info
@@ -146,26 +165,31 @@ ItalicFont = Fontin-Italic.otf
 2013 & Richard J. Kokes Award, \textbf{North American Catalysis Society} \\
 2010 & Graduate Research Fellowship, \textbf{National Science Foundation} \\
 2010 & Finalist, \textbf{Rhodes Scholarship} \\
+2010 & Outstanding Undergraduate Student in Mathematics, \textbf{University of South Carolina} \\
+2009 & Outstanding Chemical Engineering Senior, \textbf{University of South Carolina} \\
 2008 & \textbf{Barry M. Goldwater Scholarship} \\
 \end{tabular}
 
 \begin{refsection}
 %\section{Publications}
 %\vspace{0.1in}
-\nocite{Dagdelen2017,Mathew2017,C7CP02855E,Montoya2017a,Montoya2017,Latimer2016,Seitz2016,Sandberg2016,Tsai2016,Wang2015,Bertheussen2016,Doyle2015,Montoya2015,Montoya2015a,Schaal2007,Montoya2014,Hansen2013,Montoya2013}
+\nocite{Montoya2018,Singh2018,Singh2017,Dagdelen2017,Mathew2017,C7CP02855E,Montoya2017a,Montoya2017,Latimer2016,Seitz2016,Sandberg2016,Tsai2016,Wang2015,Bertheussen2016,Doyle2015,Montoya2015,Montoya2015a,Schaal2007,Montoya2014,Hansen2013,Montoya2013}
 %\nocite{*}
 %\bibliographystyle{unsrt}
 \printbibliography
 \end{refsection}
-\vspace{0.2in}
-\begin{refsection}
-%\subsection{Forthcoming publications}
-\nocite{Montoya2017b,Winter2017,Singh2017,Singh2017a}
-\printbibliography[title=Forthcoming Publications]
-\end{refsection}
-\vspace{0.2in}
-\section{Selected Recent and Upcoming Talks}
+% \vspace{0.2in}
+% \begin{refsection}
+% %\subsection{Forthcoming publications}
+% \nocite{Montoya2017b,Singh2017a}
+% \printbibliography[title=Forthcoming Publications]
+% \end{refsection}
+% \vspace{0.2in}
+\section{Recent Talks}
 \begin{tabular}{ll}
+March 2018 & \textsc{The Materials Project: A Science Gateway for Computational}\\
+& \textsc{Materials Science} \vspace{0.04in} \\
+& \textbf{ACS Spring Meeting, New Orleans, LA} \vspace{0.1in} \\
 November 2017 & \textsc{A High-Throughput Computational Screening Approach for}\\
 & \textsc{Solar Fuels Photoelectrocatalysis} \vspace{0.02in} \\
 &  \textsc{New Milestones and Challenges to High-Throughput Computation} \\ 
@@ -213,7 +237,7 @@ May 2017 & \textsc{Electrocatalysis for renewable energy via}\\
 \textbf{The Materials Project} & Instructor and course designer in the annual \\
 Fall 2016-2017 & \href{https://github.com/materialsproject/workshop-2017}{Materials Project Workshop}. \vspace{0.13in}\\
 
-\textbf{Guest Lecturer} & Gave 2 lectures on pymatgen and the materials project, \\ 
+\textbf{Guest Lecturer} & Two guest lectures on pymatgen and the materials project, \\ 
 UC Berkeley & in MSE 215: ``Computational Materials Science'' \\
 Fall 2016-2017 & 
  \end{tabular} \vspace{0.2in}
@@ -240,14 +264,14 @@ Fall 2016-2017 &
  & including VASP, Quantum Espresso, GPAW, and Dacapo \vspace{0.13in}\\
  \textbf{Technical writing} & Experience in preparation of scientific manuscripts, research \\
  \textbf{and reviewing} & proposals, \LaTeX, and data visualization \vspace{0.05in}\\
-& Reviewed articles in ACS Catalysis (5), J. Phys. Chem. (1), \\
-& Chem. Mater. (3), and Catalysis Today (1)
+& Reviewed articles in ACS Catalysis (6), J. Phys. Chem. (1), \\
+& Chem. Mater. (6), and Catalysis Today (2), Nat. Catalysis (1)
  \end{tabular}
 \section{Hobbies and other interests}
 \begin{tabular}{ll}
  \textsc{Music} & Advanced proficiency in jazz vibraphone, completed coursework in jazz \\
- & improvisation, jazz standards for gigs, and current member of \textit{Music of the Masters}\\
- & ensemble at California Jazz Conservatory's Community Jazz School.\vspace{0.05in}\\
+ & improvisation, jazz standards for gigs, and current member of \textit{Music of the} \\
+ & \textit{Masters} ensemble at California Jazz Conservatory's Community Jazz School.\vspace{0.05in}\\
  & Collegiate proficiency in classical piano.  Earned a performance certificate\\
  & from two recitals given while at University of South Carolina in the studio of\\
  & Prof. Joseph Rackers.\vspace{0.05in}\\
@@ -255,7 +279,8 @@ Fall 2016-2017 &
  & Pans Steel Drum ensemble. \vspace{0.05in}\\
   \textsc{Quiz Bowl} & Experienced moderator, player, and question writer for ACF and NAQT \\
  & format team academic buzzer-based competitions, formerly for \\
- & University of South Carolina and Stanford, currently serves as a volunteer.
+ & University of South Carolina and Stanford, currently as a volunteer. \vspace{0.05in} \\
+\textsc{Running} & Participated in various 5K, 10K, and half-marathon length races.
 \end{tabular}
 \nocite{*}
 \end{document}
